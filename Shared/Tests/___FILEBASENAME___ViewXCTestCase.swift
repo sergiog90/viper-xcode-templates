@@ -26,25 +26,25 @@ class ___VARIABLE_productName___ViewXCTestCase: XCTestCase {
         sut.beginAppearanceTransition(false, animated: false)
         sut.endAppearanceTransition()
     }
-
-    // MARK: - Mocks Classes
-
-    private class PresenterMock: ___VARIABLE_productName___PresenterProtocol {
-        var router: ___VARIABLE_productName___RouterProtocol
-        var interactor: ___VARIABLE_productName___InteractorProtocol
-        var view: ___VARIABLE_productName___ViewProtocol?
-
-        init() {
-            self.router = RouterMock()
-            self.interactor = InteractorMock()
-        }
-    }
-
-    private class RouterMock: ___VARIABLE_productName___RouterProtocol {
-
-        var view: ___VARIABLE_productName___ViewProtocol?
-
-    }
-
-    private class InteractorMock: ___VARIABLE_productName___InteractorProtocol {}
 }
+
+// MARK: - Mocks Classes
+
+private class PresenterMock: ___VARIABLE_productName___PresenterProtocol {
+    var router: ___VARIABLE_productName___RouterProtocol
+    var interactor: ___VARIABLE_productName___InteractorProtocol
+    var view: ___VARIABLE_productName___ViewProtocol?
+
+    init() {
+        self.router = RouterMock()
+        self.interactor = InteractorMock()
+    }
+}
+
+private class RouterMock: ___VARIABLE_productName___RouterProtocol {
+
+    var view: ___VARIABLE_productName___ViewProtocol?
+
+}
+
+private class InteractorMock: ___VARIABLE_productName___InteractorProtocol {}
