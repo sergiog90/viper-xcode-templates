@@ -10,7 +10,6 @@ import XCTest
 @testable import ___PROJECTNAME___
 
 final class ___VARIABLE_productName___InteractorTests: XCTestCase {
-
     private var sut: ___VARIABLE_productName___Interactor!
 
     override func setUp() {
@@ -21,7 +20,6 @@ final class ___VARIABLE_productName___InteractorTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-
 }
 
 extension ___VARIABLE_productName___InteractorTests {

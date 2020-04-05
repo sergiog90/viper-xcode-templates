@@ -10,7 +10,6 @@ import XCTest
 @testable import ___PROJECTNAME___
 
 class ___VARIABLE_productName___RouterTests: XCTestCase {
-
     private var sut: ___VARIABLE_productName___Router!
 
     override func setUp() {

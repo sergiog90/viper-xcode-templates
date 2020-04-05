@@ -43,5 +43,4 @@ final class ___VARIABLE_productName___Module: ModuleProtocol {
         router.view = view
         return view
     }
-
 }

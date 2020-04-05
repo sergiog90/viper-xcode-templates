@@ -10,7 +10,6 @@ import XCTest
 @testable import ___PROJECTNAME___
 
 class ___VARIABLE_productName___ModuleTests: XCTestCase {
-
     private var sut: ___VARIABLE_productName___Module!
 
     override func setUp() {
@@ -21,7 +20,6 @@ class ___VARIABLE_productName___ModuleTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-
 }
 
 extension ___VARIABLE_productName___ModuleTests {
@@ -63,5 +61,4 @@ extension ___VARIABLE_productName___ModuleTests {
 
         XCTAssertNotNil(sut.router.view)
     }
-
 }

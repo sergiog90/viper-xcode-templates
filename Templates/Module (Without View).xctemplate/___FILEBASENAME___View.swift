@@ -9,7 +9,6 @@
 import UIKit
 
 final class ___VARIABLE_productName___View: UIViewController, ___VARIABLE_productName___ViewProtocol {
-
     let presenter: ___VARIABLE_productName___PresenterProtocol
 
     init(presenter: ___VARIABLE_productName___PresenterProtocol) {

@@ -9,7 +9,6 @@
 import Foundation
 
 final class ___VARIABLE_productName___Presenter: ___VARIABLE_productName___PresenterProtocol {
-
     let router: ___VARIABLE_productName___RouterProtocol
     let interactor: ___VARIABLE_productName___InteractorProtocol
 

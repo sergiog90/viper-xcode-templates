@@ -10,7 +10,6 @@ import XCTest
 @testable import ___PROJECTNAME___
 
 class ___VARIABLE_productName___PresenterTests: XCTestCase {
-
     private let router = ___VARIABLE_productName___RouterMock()
     private let interactor = ___VARIABLE_productName___InteractorMock()
     private var sut: ___VARIABLE_productName___Presenter!
@@ -27,7 +26,7 @@ extension ___VARIABLE_productName___PresenterTests {
 }
 
 private class ___VARIABLE_productName___RouterMock: ___VARIABLE_productName___RouterProtocol {
-    var view: ___VARIABLE_productName___ViewProtocol?
+    var view: UIViewController?
 
 }
 
