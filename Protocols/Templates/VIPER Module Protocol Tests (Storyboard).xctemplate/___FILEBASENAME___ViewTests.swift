@@ -60,6 +60,6 @@ private class RouterMock: ___VARIABLE_productName___RouterProtocol {
 
 }
 
-private class InteractorMock: CharactersInteractorProtocol {
+private class InteractorMock: ___VARIABLE_productName___InteractorProtocol {
 
 }

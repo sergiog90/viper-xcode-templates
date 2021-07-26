@@ -17,7 +17,6 @@ extension URL {
 }
 
 class VIPERFileManager: FileManager {
-
     enum VIPERFileManagerError: Error, LocalizedError {
         case template
         case remove
@@ -61,35 +60,44 @@ class VIPERFileManager: FileManager {
         }
         do {
             debugPrint("INFO: Installing VIPER Template")
-            let templates = URL(fileURLWithPath: currentDirectoryPath, isDirectory: true)
-                .appendingPathComponent("Templates")
-            try copyItem(at: templates, to: URL.viper)
-            try installSharedTemplates()
-            try installSharedTests()
+            let inheritance = URL(fileURLWithPath: currentDirectoryPath, isDirectory: true)
+                .appendingPathComponent("Inheritance").appendingPathComponent("Templates")
+            let protocols = URL(fileURLWithPath: currentDirectoryPath, isDirectory: true)
+                .appendingPathComponent("Protocols").appendingPathComponent("Templates")
+            // TODO: Make URL.viper directory and copy contents of base and protocols to this pathx
+            try createDirectory(at: URL.viper, withIntermediateDirectories: true, attributes: nil)
+
+            try copyContent(at: inheritance, to: URL.viper)
+            try copyContent(at: protocols, to: URL.viper)
+//            try copyItem(at: base, to: URL.viper)
+//            try copyItem(at: protocols, to: URL.viper)
+            try installProtocolsSharedTemplates()
+            try installProtocolsSharedTests()
+
         } catch {
             debugPrint(error)
             throw VIPERFileManagerError.install
         }
     }
 
-    private func installSharedTemplates() throws {
-        let templates = URL(fileURLWithPath: currentDirectoryPath, isDirectory: true).appendingPathComponent("Shared/Templates")
+    private func installProtocolsSharedTemplates() throws {
+        let templates = URL(fileURLWithPath: currentDirectoryPath, isDirectory: true).appendingPathComponent("Protocols/Shared/Templates")
         do {
             debugPrint("INFO: Installing VIPER Shared Template")
-            try copyContent(at: templates, to: URL.viper.appendingPathComponent("Module (Storyboard).xctemplate", isDirectory: true))
-            try copyContent(at: templates, to: URL.viper.appendingPathComponent("Module (Without View).xctemplate", isDirectory: true))
-            try copyContent(at: templates, to: URL.viper.appendingPathComponent("Module (Xib).xctemplate", isDirectory: true))
+            try copyContent(at: templates, to: URL.viper.appendingPathComponent("VIPER Module Protocol (Storyboard).xctemplate", isDirectory: true))
+            try copyContent(at: templates, to: URL.viper.appendingPathComponent("VIPER Module Protocol (Without View).xctemplate", isDirectory: true))
+            try copyContent(at: templates, to: URL.viper.appendingPathComponent("VIPER Module Protocol (Xib).xctemplate", isDirectory: true))
         } catch {
             throw VIPERFileManagerError.install
         }
     }
 
-    private func installSharedTests() throws {
-        let templates = URL(fileURLWithPath: currentDirectoryPath, isDirectory: true).appendingPathComponent("Shared/Tests")
+    private func installProtocolsSharedTests() throws {
+        let templates = URL(fileURLWithPath: currentDirectoryPath, isDirectory: true).appendingPathComponent("Protocols/Shared/Tests")
         do {
             debugPrint("INFO: Installing VIPER Shared Tests Template")
-            try copyContent(at: templates, to: URL.viper.appendingPathComponent("Module Tests (Storyboard).xctemplate", isDirectory: true))
-            try copyContent(at: templates, to: URL.viper.appendingPathComponent("Module Tests.xctemplate", isDirectory: true))
+            try copyContent(at: templates, to: URL.viper.appendingPathComponent("VIPER Module Protocol Tests (Storyboard).xctemplate", isDirectory: true))
+            try copyContent(at: templates, to: URL.viper.appendingPathComponent("VIPER Module Protocol Tests.xctemplate", isDirectory: true))
         } catch {
             throw VIPERFileManagerError.install
         }

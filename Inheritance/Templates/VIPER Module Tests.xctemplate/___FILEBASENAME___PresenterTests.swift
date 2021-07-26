@@ -1,0 +1,33 @@
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//  Copyright © ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//
+
+import XCTest
+@testable import ___PROJECTNAME___
+
+class ___VARIABLE_productName___PresenterTests: XCTestCase {
+    private let router = ___VARIABLE_productName___RouterMock()
+    private let interactor = ___VARIABLE_productName___InteractorMock()
+    private var sut: ___VARIABLE_productName___Presenter<___VARIABLE_productName___ViewController, ___VARIABLE_productName___InteractorMock, ___VARIABLE_productName___RouterMock>!
+
+    override func setUp() {
+        super.setUp()
+        sut = ___VARIABLE_productName___Presenter(interactor: interactor, router: router)
+    }
+}
+
+extension ___VARIABLE_productName___PresenterTests {
+    // TODO: Test presenter
+}
+
+private class ___VARIABLE_productName___RouterMock: ___VARIABLE_productName___RouterProtocol {
+    var view: UIViewController?
+}
+
+private class ___VARIABLE_productName___InteractorMock: ___VARIABLE_productName___InteractorProtocol {
+
+}
