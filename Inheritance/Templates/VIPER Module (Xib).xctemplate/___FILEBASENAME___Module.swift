@@ -19,11 +19,11 @@ final class ___VARIABLE_productName___Module: ModuleProtocol {
     }()
 
     private(set) lazy var presenter: ___VARIABLE_productName___Presenter = {
-        ___VARIABLE_productName___Presenter<___VARIABLE_productName___View, ___VARIABLE_productName___Interactor, ___VARIABLE_productName___Router>(interactor: interactor, router: router)
+        ___VARIABLE_productName___Presenter<___VARIABLE_productName___ViewController, ___VARIABLE_productName___Interactor, ___VARIABLE_productName___Router>(interactor: interactor, router: router)
     }()
 
-    private(set) lazy var view: ___VARIABLE_productName___View = {
-        ___VARIABLE_productName___View(presenter: presenter)
+    private(set) lazy var view: ___VARIABLE_productName___ViewController = {
+        ___VARIABLE_productName___ViewController(presenter: presenter)
     }()
 
     // MARK: - Build

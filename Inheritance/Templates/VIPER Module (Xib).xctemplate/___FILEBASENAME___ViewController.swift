@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ___VARIABLE_productName___View: BaseView, ___VARIABLE_productName___ViewProtocol {
+final class ___VARIABLE_productName___ViewController: BaseViewController, ___VARIABLE_productName___ViewProtocol {
     private let presenter: ___VARIABLE_productName___PresenterProtocol
 
     init(presenter: ___VARIABLE_productName___PresenterProtocol) {
