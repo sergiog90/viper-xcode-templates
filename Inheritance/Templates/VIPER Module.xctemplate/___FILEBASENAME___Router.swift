@@ -8,6 +8,8 @@
 
 import UIKit
 
-final class ___VARIABLE_productName___Router<V: UIViewController>: BaseRouter<V>, ___VARIABLE_productName___RouterProtocol {
+final class ___VARIABLE_productName___Router<V: UIViewController>: BaseRouter<V> {
 
 }
+
+extension ___VARIABLE_productName___Router: ___VARIABLE_productName___RouterProtocol {}

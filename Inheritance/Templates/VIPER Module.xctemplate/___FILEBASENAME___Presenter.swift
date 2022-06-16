@@ -8,6 +8,12 @@
 
 import Foundation
 
-final class ___VARIABLE_productName___Presenter<V: ___VARIABLE_productName___ViewProtocol, I: ___VARIABLE_productName___InteractorProtocol, R: ___VARIABLE_productName___RouterProtocol>: BasePresenter<V, I, R>, ___VARIABLE_productName___PresenterProtocol {
+final class ___VARIABLE_productName___Presenter<
+    V: ___VARIABLE_productName___ViewProtocol, 
+    I: ___VARIABLE_productName___InteractorProtocol, 
+    R: ___VARIABLE_productName___RouterProtocol>: 
+        BasePresenter<V, I, R> {
 
 }
+
+extension ___VARIABLE_productName___Presenter: ___VARIABLE_productName___PresenterProtocol {}

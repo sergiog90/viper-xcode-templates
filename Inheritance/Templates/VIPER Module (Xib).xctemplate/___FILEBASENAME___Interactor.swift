@@ -8,6 +8,8 @@
 
 import Foundation
 
-final class ___VARIABLE_productName___Interactor: BaseInteractor, ___VARIABLE_productName___InteractorProtocol {
+final class ___VARIABLE_productName___Interactor: BaseInteractor {
 
 }
+
+extension ___VARIABLE_productName___Interactor: ___VARIABLE_productName___InteractorProtocol {}

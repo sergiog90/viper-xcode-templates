@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ___VARIABLE_productName___ViewController: BaseViewController, ___VARIABLE_productName___ViewProtocol {
+final class ___VARIABLE_productName___ViewController: BaseViewController {
     private let presenter: ___VARIABLE_productName___PresenterProtocol
 
     init(presenter: ___VARIABLE_productName___PresenterProtocol) {
@@ -20,3 +20,5 @@ final class ___VARIABLE_productName___ViewController: BaseViewController, ___VAR
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+extension ___VARIABLE_productName___ViewController: ___VARIABLE_productName___ViewProtocol {}
