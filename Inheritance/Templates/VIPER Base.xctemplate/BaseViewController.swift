@@ -11,9 +11,14 @@ import UIKit
 class BaseViewController: UIViewController, ViewProtocol {
     private let presenter: PresenterProtocol
 
-    init(presenter: PresenterProtocol, storyboard: String? = nil) {
+    init(presenter: PresenterProtocol) {
         self.presenter = presenter
-        super.init(nibName: Self.identifier, bundle: .main)
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    init(presenter: PresenterProtocol, identifier: String) {
+        self.presenter = presenter
+        super.init(nibName: identifier, bundle: .main)
     }
 
     required init?(coder: NSCoder) {

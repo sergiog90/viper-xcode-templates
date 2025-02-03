@@ -11,17 +11,39 @@
 		<string>com.apple.platform.iphoneos</string>
 	</array>
 	<key>DefaultCompletionName</key>
-	<string>VIPER</string>
+	<string>NewVIPERModule</string>
 	<key>Description</key>
-	<string>VIPER Module base template.</string>
+	<string>VIPER Module template, including View, Presenter, Router, and Interactor with inheritance.</string>
 	<key>Kind</key>
 	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
 	<key>MainTemplateFile</key>
-	<string>VIPER.swift</string>
+	<string>___FILEBASENAME___</string>
 	<key>SortOrder</key>
 	<integer>1</integer>
 	<key>Options</key>
 	<array>
+		<dict>
+			<key>Default</key>
+			<string></string>
+			<key>Description</key>
+			<string>The name of the VIPER module, in CamelStyle</string>
+			<key>Identifier</key>
+			<string>viperModuleName</string>
+			<key>Name</key>
+			<string>Module Name</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_viperModuleName___</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
 	</array>
 </dict>
 </plist>

@@ -13,7 +13,7 @@ final class ___VARIABLE_productName___ViewController: BaseViewController {
 
     init(presenter: ___VARIABLE_productName___PresenterProtocol) {
         self.presenter = presenter
-        super.init(presenter: presenter, storyboard: nil)
+        super.init(presenter: presenter, identifier: Self.identifier)
     }
 
     required init?(coder: NSCoder) {
